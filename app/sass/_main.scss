@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+	max-width: 1080px; 
+}
+
+body {
+	font-family: 'gilroy', 'Arial', sans-serif;
+    font-weight: 500;
+	font-style: normal;
+	color: $black;
+}
+
+a {
+    color: $red;
+}
+
+h1 {
+    text-align: center;
+	font-family: 'gilroy', sans-serif;
+	font-weight: 900;
+}
