@@ -1,0 +1,85 @@
+.choice {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 220px);
+    padding-bottom: 62px;
+    &__between__option {
+        display: inline-block;
+        padding-right: 56px;
+        color: $grey-text;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 42px;
+        margin-top: 5px;
+        &--active {
+            background: linear-gradient(45deg, #EF8080 10%, #F0145A 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        &:not(.choice__between__option--active):hover {
+            color: $grey-bg;
+            transition: ease 0.3s;
+        }
+    }
+    &__between {
+        border-right: 5px rgba($color: white, $alpha: 0.3) solid;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-right: 5px rgba($color: white, $alpha: 0.3) solid;
+        gap: 10px;
+    }
+    &__description {
+        margin-top: 20px;
+        margin-left: 56px;
+        &__title {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 27px;
+        }
+        &__text {
+            color: $grey-separator;
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .choice {
+    grid-template-columns: auto;
+    grid-template-rows: 50% auto;
+  }
+
+  .choice__between {
+    display: inline-flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    padding-bottom: 10px;
+    border-right: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 34.5px;
+    border-bottom: 5px rgba($color: white, $alpha: 0.3) solid;
+}
+
+  .choice__between::-webkit-scrollbar {
+    display: none;
+  }
+
+  .choice__between__option {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .choice__description {
+    position: relative;
+    right: 7%;
+    margin-bottom: 80px;
+  }
+}

@@ -1,0 +1,25 @@
+.gradient {
+    background: linear-gradient(228deg, $main-regular 0%, $main-regular 60%, #643E72 100%);
+    border-radius: 0px 0px 12px 12px;
+    position: relative;
+    &::after {
+        content: '';
+        background-color: #CACADB;
+        border-radius: 0 0 12px 12px;
+        position: absolute;
+        left: 40px;
+        right: 40px;
+        bottom: -10px;
+        height: 10px;
+    }
+    &::before {
+        content: '';
+        background-color: #E7E7F2;
+        border-radius: 0 0 12px 12px;
+        position: absolute;
+        left: 40px + 40px;
+        right: 40px + 40px;
+        bottom: -20px;
+        height: 10px;
+    }
+}

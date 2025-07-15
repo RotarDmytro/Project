@@ -1,0 +1,164 @@
+.publications {
+    margin-bottom: 30px;
+    &__block-one {
+        margin-top: 34px;
+        margin-bottom: 31px;
+        &__link {
+            display: inline-flex;
+            position: relative;
+            margin-bottom: 10px;
+            &:hover svg path {
+                stroke: $accent;
+            }
+        }
+        &__link a {
+            font-size: 18px;
+            color: $active-regular;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            &:hover {
+                color: $accent;
+                transition: ease 0.3s;
+            }
+        }
+        &__link a svg {
+            position: absolute;
+            top: 5px;
+            margin-left: 1px;
+        }
+        &__title {
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 48px;
+            background: linear-gradient(45deg, #F0145A 10%, #EF8080 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding: 0;
+            overflow: visible;
+        }
+    }
+    &__block-two {
+        display: grid;
+        grid-template-columns: repeat(3, 410px);
+        grid-template-rows: repeat(1, 486px);
+        &__card {
+            background-color: white;
+            width: 380px;
+            border-radius: 0 0 12px 12px;
+            &__image img {
+                width: 380px;
+            }
+            &__link {
+                margin-top: 15px;
+                margin-left: 30px;
+            }
+            &__link a {
+                font-size: 16px;
+                color: $active-regular;
+                font-weight: bold;
+            }
+            &__date {
+                font-weight: bold;
+                color: $grey-text;
+                text-transform: uppercase;
+                font-size: 14px;
+                letter-spacing: 0.1em;
+                margin-top: 20px;
+                margin-left: 30px;
+                width: 315px;
+                border-bottom: 5px $grey-separator solid;
+                padding-bottom: 18px;
+            }
+            &__text {
+                color: black;
+                margin-top: 21px;
+                margin-left: 30px;
+                letter-spacing: normal;
+                font-size: 16px;
+                margin-right: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .publications__block-two__card__image img {
+        width: 100%;
+    }
+
+    .publications__block-two__card {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .publications__block-two {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+    }
+
+    .publications__block-two__card__date {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .publications__block-two__card__image img {
+        width: 100%;
+    }
+
+    .publications__block-two__card {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .publications__block-two {
+        grid-template-columns: 300px 300px 300px;
+    }
+
+    .publications__block-two__card__date {
+        width: 80%;
+    }
+
+    .publications__block-two {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        column-gap: 30px;
+        row-gap: 30px;
+        justify-content: center;
+        margin-bottom: 10px;
+        justify-items: center;
+    }
+
+    .publications__block-two__card:nth-child(1),
+    .publications__block-two__card:nth-child(2) {
+        height: 450px;
+    }
+
+    .publications__block-two__card:nth-child(3) {
+        grid-column: 1 / 3;
+        justify-self: center;
+        width: 620px;
+        border-radius: 0 0 12px 12px;
+        height: 400px;
+    }
+
+    .publications__block-two__card:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .publications__block-two__card:nth-child(3) img {
+        width: 620px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .publications__block-two__card__date {
+        width: auto;
+        margin-right: 20px;
+    }
+}

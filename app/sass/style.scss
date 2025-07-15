@@ -1,5 +1,27 @@
+// 1. Базове
 @import 'fonts';
 @import 'variables';
-@import 'main';
+
+// 2. Бібліотеки
 @import '../../node_modules/slick-carousel/slick/slick.scss';
+
+// 3. Базові утиліти та глобальні стилі
+@import 'main';
+@import 'gradient';
+@import 'overlay';
+@import 'no-scroll';
+@import 'container';
+@import 'grey-bg';
+@import 'h-bg';
+@import 'scroll';
+
+// Компоненти
+@import 'header';
+@import 'choice';
+@import 'advantages';
+@import 'leveling';
+@import 'page-content';
+@import 'link';
+@import 'publications';
 @import 'slider';
+@import 'footer';

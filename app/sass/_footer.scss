@@ -1,0 +1,195 @@
+a:hover .footer-s__menu__left__bottom__phone {
+    color: $accent;
+    transition: ease 0.3s;
+}
+
+.footer-s__menu__left__bottom__link a:hover {
+    color: $accent;
+    transition: ease 0.3s;
+}
+
+.footer {
+    margin-top: 30px;
+    border-top: 3px $grey-separator solid;
+    &-s {
+        margin-top: 17px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px 0;
+        &__menu {
+            &__left {
+                &__top {
+                    margin-bottom: 25px;
+                    &__text {
+                        color:  $main-regular;
+                        margin: 0 2px 0 0;
+                        font-size: 18px;
+                    }
+                    &__dots {
+                        color: $grey-text;
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 30px;
+                        line-height: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 4px;
+                        margin-left: 2px;
+                        position: relative;
+                        top: 3px;
+                        display: inline-flex;
+                    }
+                    &__link a {
+                        font-size: 14px;
+                        color: $active-regular;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                    &__link a:hover {
+                        color: $accent;
+                        transition: ease 0.3s;
+                    }
+                    &__link {
+                        display: inline-flex;
+                    }
+                }
+                &__bottom {
+                    display: flex;
+                    &__facebook svg path {
+                        transition: fill ease 0.3s;
+                    }
+                    &__facebook:hover svg path {
+                        fill: $accent;
+                    }
+                    &__dots {
+                        color: $grey-text;
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 30px;
+                        line-height: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 12px;
+                        margin-left: 10px;
+                        position: relative;
+                        display: inline-flex;
+                        bottom: 3px;
+                    }
+                    &__phone {
+                        font-size: 18px;
+                        position: relative;
+                        color: $active;
+                        margin: 0 2px;
+                        font-weight: bold;
+                        top: 8px;
+                    }
+                    &__link {
+                        font-size: 18px;
+                        position: relative;
+                        margin: 0 2px;
+                        font-weight: bold;
+                        top: 8px;
+                    }
+                    &__link a {
+                        color: $active;
+                    }
+                }
+            }
+            &__right {
+                grid-column: 3 / 3;
+                justify-self: end;
+                &__text {
+                    color: $grey-text;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .footer-s {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-s__menu__left__top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .footer-s__menu__left__top__dots {
+        margin: 0 8px;
+        transform: translateY(-4px);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer-s {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    .footer-s__menu__left__top {
+        position: relative;
+        right: 25%;
+    }
+
+    .footer-s__menu__left__top {
+        display: flex;
+        justify-content: flex-start;
+        left: 0%;
+        align-items: center;
+    }
+
+    .footer-s__menu__left__top__dots {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 10px;
+        height: 10px;
+        margin: 0 10px;
+        transform: translateY(-4px);
+    }
+
+    .footer-s__menu__left__top__dots::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background-color: $grey-text;
+        border-radius: 50%;
+    }
+
+    .footer-s__menu__left__bottom__dots {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 10px;
+        height: 10px;
+        margin: 0 10px;
+        transform: translateY(16px);
+    }
+
+    .footer-s__menu__left__bottom__dots::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background-color: $grey-text;
+        border-radius: 50%;
+    }
+
+    .footer-s__menu__left__bottom {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .footer-s__menu__right {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

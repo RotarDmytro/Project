@@ -1,0 +1,89 @@
+.advantages {
+    &__services {
+        display: inline-flex;
+        position: relative;
+        margin-bottom: 10px;
+        &:hover svg path {
+            stroke: $accent;
+        }
+    }
+    &__services a {
+        font-size: 18px;
+        color: $active-regular;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        &:hover {
+            color: $accent;
+            transition: ease 0.3s;
+        }
+    }
+    &__services a svg {
+        position: absolute;
+        top: 5px;
+        margin-left: 1px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 42px;
+        margin-bottom: 69px;
+        background: linear-gradient(45deg, #F0145A 10%, #EF8080 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+    &__marking {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        &__items {
+            margin-bottom: 67px;
+            &__icons {
+                background-color: white;
+                border-radius: 14px;
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 35px;
+            }
+            &__title {
+                font-size: 18px;
+                color: $active-regular;
+                font-weight: bold;
+                margin-bottom: 28px;
+            }
+            &__text  {
+                font-size: 16px;
+                line-height: 24px;
+                color: $grey-bg;
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .advantages__marking__items__text {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .advantages__marking__items__text {
+        width: 90%;
+    }
+    .advantages__title {
+        margin-bottom: 50px;
+    }
+    .advantages__marking__items {
+        width: 90%;
+    }
+    .advantages__marking {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,167 @@
+.link {
+    margin-bottom: 68px;
+    &__title {
+        display: block;
+        font-weight: bold;
+        color: $main-regular;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: -237px;
+    }
+    &__card {
+        margin-top: 263px;
+        display: grid;
+        height: 360px;
+        width: 1440px;
+        grid-template-columns: repeat(4, 300px);
+        grid-template-rows: repeat(3, 120px);
+        &__one {
+            display: flex;
+            background-color: #1C4280;
+            justify-content: center;
+            align-items: center;
+        }
+        &__two {
+            background-color: #143646;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__three {
+            display: flex;
+            background-color: #F48B30;
+            justify-content: center;
+            align-items: center;
+        }
+        &__four {
+            display: flex;
+            background-color: #9E4DC3;
+            justify-content: center;
+            align-items: center;
+        }
+        &__five {
+            display: flex;
+            background-color: #FD9339;
+            justify-content: center;
+            align-items: center;
+        }
+        &__six {
+            display: flex;
+            background-color: #E2E2E4;
+            justify-content: center;
+            align-items: center;
+        }
+        &__seven {
+            display: flex;
+            background-color: #C71C36;
+            justify-content: center;
+            align-items: center;
+        }
+        &__eight {
+            display: flex;
+            background-color: #DCF3F9;
+            justify-content: center;
+            align-items: center;
+        }
+        &__nine {
+            display: flex;
+            background-color: #EAEAEA;
+            justify-content: center;
+            align-items: center;
+        }
+        &__ten {
+            display: flex;
+            background-color: #282240;
+            justify-content: center;
+            align-items: center;
+        }
+        &__eleven {
+            display: flex;
+            background-color: #1D4568;
+            justify-content: center;
+            align-items: center;
+        }
+        &__twelve {
+            display: flex;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+        }
+        &__one:hover {
+            cursor: pointer;
+        }
+        &__two:hover {
+            cursor: pointer;
+        }
+        &__three:hover {
+            cursor: pointer;
+        }
+        &__four:hover {
+            cursor: pointer;
+        }
+        &__six:hover {
+            cursor: pointer;
+        }
+        &__seven:hover {
+            cursor: pointer;
+        }
+        &__eight:hover {
+            cursor: pointer;
+        }
+        &__nine:hover {
+            cursor: pointer;
+        }
+        &__ten:hover {
+            cursor: pointer;
+        }
+        &__eleven:hover {
+            cursor: pointer;
+        }
+        &__twelve:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .link__card {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 120px);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .link__card {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 120px);
+    }
+    .link__card img {
+        width: 70%;
+    }
+
+    .link__card__one a,
+    .link__card__two a,
+    .link__card__three a,
+    .link__card__four a,
+    .link__card__five a,
+    .link__card__six a,
+    .link__card__seven a,
+    .link__card__eight a,
+    .link__card__nine a,
+    .link__card__ten a,
+    .link__card__eleven a,
+    .link__card__twelve a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link__card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        margin-bottom: -60px;
+    }
+}

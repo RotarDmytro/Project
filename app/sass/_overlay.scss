@@ -1,0 +1,19 @@
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        display: none;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+}
